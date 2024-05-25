@@ -2,22 +2,21 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { fetchAPIData } from "./api/DataProvider";
+import {ProductPanel} from "./components/ProductPanel";
 
 const App = () => {
-  const apiData: any = fetchAPIData();
+  const apiData = fetchAPIData();
+  const product = apiData.productData[0];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <div>
-          <footer>
-            {JSON.stringify(apiData)}
-          </footer>
-        </div>
-      </header>
+      <div style={{'width': 200}}>
+        <ProductPanel
+            image={product.image}
+            title={product.title}
+            subtitle={product.subtitle}
+            tags={product.tags}
+        />
+      </div>
     </div>
   );
 }

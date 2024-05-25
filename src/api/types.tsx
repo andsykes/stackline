@@ -1,8 +1,8 @@
-export interface SalesAPIResponse {
-    productSales: ProductSales[]
+export interface ListProductSalesResponse {
+    productData: ProductData[]
 }
 
-export interface ProductSales {
+export interface ProductData {
     brand: string;
     details: string[];
     id: string;

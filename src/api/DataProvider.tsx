@@ -1,8 +1,8 @@
 import data from '../data/stackline_frontend_assessment_data_2021.json'
-import { SalesAPIResponse } from "./types";
+import { ListProductSalesResponse } from "./types";
 
-export const fetchAPIData = (): SalesAPIResponse => {
+export const fetchAPIData = (): ListProductSalesResponse => {
     return {
-        productSales: data
+        productData: data
     }
 }
