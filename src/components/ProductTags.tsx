@@ -6,7 +6,16 @@ export interface ProductTagsProps {
 
 export const ProductTags = (props: ProductTagsProps) => {
   return (
-    <div style={{ width: "100%", display: "flex", flexWrap: "wrap" }}>
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        alignContent: "justify",
+        flexWrap: "wrap",
+        padding: "5px",
+        gap: "5px",
+      }}
+    >
       {props.tags?.map((tag, index) => {
         return <Badge key={index}>{tag}</Badge>;
       })}

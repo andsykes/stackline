@@ -3,15 +3,19 @@ import "./App.css";
 import { fetchAPIData } from "./api/DataProvider";
 import { ProductPanel } from "./components/ProductPanel";
 import { SalesTable } from "./components/sales-table/SalesTable";
-import { Header } from "./components/header/Header";
 
 import { createTheme } from "@mui/material/styles";
-import { ThemeProvider, Toolbar } from "@mui/material";
+import { Card, ThemeProvider } from "@mui/material";
 import { SalesGraph } from "./components/SalesGraph";
+import { grey } from "@mui/material/colors";
+import logo from "./data/stackline_logo.svg";
 
 const theme = createTheme({
   palette: {
     primary: {
+      main: grey["A100"],
+    },
+    secondary: {
       main: "#0F2747",
     },
   },
@@ -22,10 +26,11 @@ const App = () => {
   const product = apiData.productData[0];
   return (
     <ThemeProvider theme={theme}>
+      <header className={"App-header"}>
+        <img src={logo} style={{ margin: "10px", maxWidth: "100px" }} />
+      </header>
       <div className="App">
-        <Header />
-        <Toolbar />
-        <div style={{ width: 200 }}>
+        <div style={{ width: 250 }}>
           <ProductPanel
             image={product.image}
             title={product.title}
@@ -33,9 +38,14 @@ const App = () => {
             tags={product.tags}
           />
         </div>
-        <div>
-          <SalesGraph data={product.sales} />
-          <SalesTable data={product.sales} />
+        <div style={{ width: "100%" }}>
+          <Card>
+            <SalesGraph data={product.sales} />
+          </Card>
+          <br />
+          <Card>
+            <SalesTable data={product.sales} />
+          </Card>
         </div>
       </div>
     </ThemeProvider>

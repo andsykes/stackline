@@ -1,5 +1,6 @@
 import { ProductThumbnail } from "./ProductThumbnail";
 import { ProductTags } from "./ProductTags";
+import { Card } from "@mui/material";
 
 interface ProductPanelProps {
   image: string;
@@ -14,15 +15,15 @@ export const ProductPanel = (props: ProductPanelProps) => {
 
   return (
     <>
-      <div>
+      <Card style={{ padding: "2px" }}>
         <ProductThumbnail image={image} altText={altText} />
         <h3>{title}</h3>
         <p>{subtitle}</p>
-      </div>
-
-      <div>
+      </Card>
+      <br />
+      <Card>
         <ProductTags tags={tags} />
-      </div>
+      </Card>
     </>
   );
 };
