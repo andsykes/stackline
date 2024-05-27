@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/andsykes.github.io/stackline-demo/static/css/main.11e2758c.css",
+    "main.js": "/andsykes.github.io/stackline-demo/static/js/main.8a5e9cf0.js",
+    "static/media/stackline_logo.svg": "/andsykes.github.io/stackline-demo/static/media/stackline_logo.5935081bd899ecfe02395699e768f84e.svg",
+    "index.html": "/andsykes.github.io/stackline-demo/index.html",
+    "main.11e2758c.css.map": "/andsykes.github.io/stackline-demo/static/css/main.11e2758c.css.map",
+    "main.8a5e9cf0.js.map": "/andsykes.github.io/stackline-demo/static/js/main.8a5e9cf0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11e2758c.css",
+    "static/js/main.8a5e9cf0.js"
+  ]
+}
