@@ -1,6 +1,6 @@
 {
   "name": "stackline",
-  "homepage": "https://andsykes.github.io/stackline-demo", 
+  "homepage": "https://andsykes.github.io/stackline", 
   "version": "0.1.0",
   "private": true,
   "dependencies": {
