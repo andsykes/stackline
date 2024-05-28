@@ -6,6 +6,7 @@ export const getColumns = (): TableColumn<WeeklySales>[] => {
     {
       name: "Week Ending",
       sortable: true,
+      // TODO: use an actual date
       selector: (data) => data.weekEnding.toString(),
     },
     { name: "Units Sold", sortable: true, selector: (data) => data.unitsSold },

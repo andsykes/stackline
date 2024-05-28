@@ -4,15 +4,15 @@ import { Card } from "@mui/material";
 import { SalesGraph } from "../components/SalesGraph";
 import { SalesTable } from "../components/sales-table/SalesTable";
 import React from "react";
-import { ProductData } from "../api/types";
+import { useGetProductDataQuery } from "../api/productsAPI";
 
-interface ProductDetailProps {
-  product: ProductData;
-}
+export const ProductDetail = () => {
+  const { data, isLoading, error } = useGetProductDataQuery();
+  const product = data!;
 
-export const ProductDetail = (props: ProductDetailProps) => {
-  const { product } = props;
-  return (
+  return isLoading ? (
+    <div />
+  ) : (
     <Card>
       <header className={"App-header"}>
         <img src={logo} style={{ margin: "10px", maxWidth: "100px" }} />

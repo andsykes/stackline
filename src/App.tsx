@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import { fetchAPIData } from "./api/DataProvider";
 
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material";
@@ -19,11 +18,16 @@ const theme = createTheme({
 });
 
 const App = () => {
-  const apiData = fetchAPIData();
-  const product = apiData.productData[0];
+  // Normally, we'd set up routes here, where
+  // we could navigate from something like a "ListProducts" view
+  // (which would initially call the API to fetch our data), and
+  // click into a "ProductDetail", where the use of RTK will allow
+  // us to have our pre-fetched data ready to render.
+
+  // For the sake of this demo, just making the one page.
   return (
     <ThemeProvider theme={theme}>
-      <ProductDetail product={product} />ø
+      <ProductDetail />
     </ThemeProvider>
   );
 };
