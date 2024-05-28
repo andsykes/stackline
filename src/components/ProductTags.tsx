@@ -17,7 +17,11 @@ export const ProductTags = (props: ProductTagsProps) => {
       }}
     >
       {props.tags?.map((tag, index) => {
-        return <Badge key={index}>{tag}</Badge>;
+        return (
+          <Badge key={index} size={"small"} textTransform={null}>
+            {tag}
+          </Badge>
+        );
       })}
     </div>
   );

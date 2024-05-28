@@ -17,7 +17,10 @@ export const ProductDetail = () => {
       <header className={"App-header"}>
         <img src={logo} style={{ margin: "10px", maxWidth: "100px" }} />
       </header>
-      <div className="App">
+      <div
+        className="App"
+        style={{ marginLeft: "10px", marginRight: "10px", marginTop: "50px" }}
+      >
         <div style={{ width: 250 }}>
           <ProductPanel
             image={product.image}

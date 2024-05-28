@@ -22,10 +22,10 @@ export const SalesGraph = (props: SalesGrapProps) => {
   return isLoading ? (
     <div />
   ) : (
-    <Card title={"Foo"}>
+    <Card>
+      <h3 style={{ display: "flex", paddingLeft: "20px" }}>Retail Sales</h3>
       <LineChart
         height={300}
-        title={"Fafa"}
         xAxis={[
           {
             dataKey: "weekEnding",

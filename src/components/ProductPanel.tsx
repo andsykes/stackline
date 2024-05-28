@@ -18,7 +18,7 @@ export const ProductPanel = (props: ProductPanelProps) => {
       <Card style={{ padding: "2px" }}>
         <ProductThumbnail image={image} altText={altText} />
         <h3>{title}</h3>
-        <p>{subtitle}</p>
+        <p style={{ fontSize: "x-small" }}>{subtitle}</p>
       </Card>
       <br />
       <Card>
